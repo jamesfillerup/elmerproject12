@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>Quiz App</title>
+</head>
+<body onload="fAdmin();">
+
+  <nav class="navbar navbar-light ml-auto" style="background-color:  #234F1E;"> <!-- 660000 -->
+
+      <div class="container-fluid">
+
+          <div class="navbar-header">
+
+              <a class="navbar-brand" href="#">
+
+              <img alt="Brand" src="pics/InCommLogo.png" width="130" height="40"></a>
+
+          </div><div style="color:white;font-size: 1.875em;font-weight: bold;">Create Ticket To Indy Ops- FLOS</div>
+
+          <div class="dropdown"><button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color:  #234F1E;">  Hello James Fillerup</button><ul class="dropdown-menu"
+aria-labelledby="dropdownMenuButton1">  <li><a class="dropdown-item" href="#" onclick="updpwd();">Change Password</a></li>  <li><a class="dropdown-item" href="#" onclick="logout();">Sign Out</a></li> </ul></div>            </div>
+
+  </nav>
+
+  <div id="dimage" class="ctxt"></div>
+
+  <table class="cfirst" id="imainscreen">
+
+      <tbody><tr><td>
+
+          <table class="table">  
+
+              <tbody><tr>
+
+                  <td><span><a href="index.php" class="btn btn-secondary btn-sm">Main Menu</a></span></td>
+
+                  <td><div id="dSystem" hidden="true" class="ctx1"></div></td>
+
+      <td><input type="hidden" name="hsort"></td>
+
+      <td><input type="hidden" name="horder"></td>
+
+      <td><div id="dOptions"></div></td>
+
+                  <td><div id="idimpo"></div></td>
+
+                  <td><div id="idMsgs"></div></td>
+
+              </tr>
+
+  </tbody></table>
+
+              
+
+      </td></tr><tr><td>
+
+          <table class="cbody">
+
+              <colgroup>
+
+                  <col width="5%">
+
+      <col width="95%">
+
+              </colgroup>
+
+              <tbody><tr style="vertical-align: top;">
+
+                  <td><div id="tleft"><table class="table table-bordered"><tbody><tr><td><input type="Text" style="width:150px" class="form-control" id="s00" placeholder="Phone Number" aria-describedby="basic-addon1"></td></tr><tr><td>Or</td></tr><tr><td><input
+type="Text" style="width:150px" class="form-control" id="s01" placeholder="Store ID" aria-describedby="basic-addon1"><button type="button" style="width: 35; height: 35px;" class="btn btn-outline-warning" onclick="fhelp();">?</button></td></tr></tbody></table><input
+type="button" class="btn btn-secondary btn-sm" value="Search" onclick="fSearch()"> <input type="button" class="btn btn-secondary btn-sm" value="Clear" onclick="fClear()"></div></td>
+
+                  <td><div id="trighttit" class="align-top"></div>
+
+                      <table>
+
+                          <tbody><tr><td><div id="tright"><table class="table table-bordered border-primary"><input type="hidden" id="recid" value="5280"><tbody><tr><td>Store Type</td><td>OTC and Gift Cards merchant , </td></tr><tr><td>Merchant ID</td><td>15582</td></tr><tr><td>Legal
+Name</td><td>Al-Haqq Pharmacy Inc</td></tr><tr><td>Store Phone Number</td><td>7187383333</td></tr><tr><td>Platform</td><td><select id="iplatf"><option value="ICT">ICT</option><option value="Trans-X Mobile" selected="">Trans-X Mobile</option></select></td></tr><tr><td>Device
+Type</td><td><select id="iddevty"><option value="None">Select </option><option value="NEXGO - N82">NEXGO - N82</option><option value="PAX A80">PAX A80</option><option value="PAX A920">PAX A920</option><option value="PAX A920 Pro">PAX A920 Pro</option><option
+value="PAX E500">PAX E500</option><option value="P20L">P20L    </option><option value="VX520">VX520</option><option value="Web">Web Based</option></select></td></tr><tr id="rtype" hidden=""><td>Terminal Type</td><td><input id="itermty" type="text" placeholder="Ex.
+PL20, A80" aria-describedby="basic-addon1"></td></tr><tr><td>Terminal Serial Number</td><td><input id="isernum" type="text" placeholder="Ex. 123456789" aria-describedby="basic-addon1"></td></tr><tr><td>Comm Type</td><td><select id="idcommt"><option value="DHCP">DHCP</option><option
+value="Dial Up">Dial Up</option><option value="Static IP">Static IP</option></select></td></tr><tr><td>Issue Type</td><td><select id="idissue"><option value="Hardware">Hardware</option><option value="Transaction">Transaction</option><option value="Connection">Connection</option><option
+value="Billing">Billing</option><option value="Reporting">Reporting</option><option value="Other">Other</option></select></td></tr><tr><td>Callback Number</td><td><input id="icallnb" type="text" placeholder="Ex. 555-555-5555" aria-describedby="basic-addon1"
+value="7187383333"></td></tr><tr><td>Contact Name</td><td><input id="iconnam" type="text" placeholder="Ex. Peter Parker" aria-describedby="basic-addon1"></td></tr><tr><td>Language</td><td><select id="ilangua"><option value="English">English</option><option
+value="Spanish">Spanish</option><option value="French">French</option></select></td></tr><tr><td>Error Provided</td><td><textarea id="ierro" cols="60" rows="2" placeholder="Error Message showing on Terminal." aria-describedby="basic-addon1"></textarea></td></tr><tr><td>Description</td><td><textarea
+id="idesc" cols="60" rows="4" placeholder="Please list the steps you took with the merchant troubleshoot this issue. Please explain the issue that occurs after troubleshooting in detail." aria-describedby="basic-addon1"></textarea></td></tr></tbody></table><button
+type="button" id="bcrearitm" onclick="fcrea_ritm();">Submit</button></div></td>
+
+                              <td><div id="tright2"></div></td>
+
+                              <td><div id="fine-uploader"></div></td>
+
+                          </tr>
+
+                      </tbody></table>
+
+      </td>
+
+              </tr>
+
+  </tbody></table>
+
+          <table><tbody><tr><td><div id="imessage"></div></td></tr></tbody></table>
+
+      </td></tr>
+
+</tbody></table>
+
+
+
+
+
+
+</body>
+
+</html>
